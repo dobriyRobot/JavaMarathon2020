@@ -15,7 +15,7 @@ public class Task2 {
         }
         player[numberOfPlayer].info();
         for (int i = 0; i <= (numbers[numberOfPlayer] - 1); i++){
-            player[numberOfPlayer].run(player[numberOfPlayer]);
+            player[numberOfPlayer].run();
         }
         player[10] = new Player(200);
     }

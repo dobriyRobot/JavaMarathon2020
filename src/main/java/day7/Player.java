@@ -7,10 +7,16 @@ public class Player {
     private static int countPlayers = 0;
 
     public Player(int theStamina) {
-        this.stamina = theStamina;
-        countPlayers++;
+        if (countPlayers > 6) {
+            System.out.println("В командах нет свободных мест");
+            return;
+        } else {
+            this.stamina = theStamina;
+            countPlayers++;
+        }
     }
-    void setStamina(int theStamina){
+
+    void setStamina(int theStamina) {
         this.stamina = theStamina;
     }
 
@@ -18,18 +24,18 @@ public class Player {
         return stamina;
     }
 
-    public void run(Player thePlayer) {
-        this.stamina = thePlayer.getStamina() - 1;
+    public void run() {
         if (stamina == MIN_STAMINA) {
             countPlayers--;
             System.out.println("\nВыносливость " + stamina + ". Игрок уходит с поля");
         } else {
+            this.stamina = stamina - 1;
             System.out.print("Игрок бежит / ");
         }
     }
 
     public void info() {
-        if (countPlayers < 5){
+        if (countPlayers < 5) {
             System.out.println("Команды не полные. На поле еще есть " + (5 - countPlayers) + " мест");
         } else {
             System.out.println("На поле нет свободных мест");

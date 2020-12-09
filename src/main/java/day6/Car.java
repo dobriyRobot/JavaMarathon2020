@@ -38,7 +38,7 @@ public class Car {
         if(result > 0){
             return result;
         } else {
-            result = 0;
+            result = Math.abs(result);
         }
         return result;
     }
