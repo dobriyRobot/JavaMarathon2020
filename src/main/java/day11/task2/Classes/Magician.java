@@ -1,6 +1,9 @@
-package day11.task2;
+package day11.task2.Classes;
 
-public class Magician extends Hero implements PhysAttack, MagicAttack{
+import day11.task2.Interfaces.MagicAttack;
+import day11.task2.Interfaces.PhysAttack;
+
+public class Magician extends Hero implements PhysAttack, MagicAttack {
     double magicAtt;
 
     public Magician(){

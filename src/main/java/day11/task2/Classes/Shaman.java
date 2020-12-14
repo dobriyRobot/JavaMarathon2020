@@ -1,4 +1,8 @@
-package day11.task2;
+package day11.task2.Classes;
+
+import day11.task2.Interfaces.Healer;
+import day11.task2.Interfaces.MagicAttack;
+import day11.task2.Interfaces.PhysAttack;
 
 public class Shaman extends Hero implements Healer, PhysAttack, MagicAttack {
     double magicAtt;

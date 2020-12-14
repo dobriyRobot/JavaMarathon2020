@@ -1,4 +1,7 @@
-package day11.task2;
+package day11.task2.Classes;
+
+import day11.task2.Interfaces.Healer;
+import day11.task2.Interfaces.PhysAttack;
 
 public class Paladin extends Hero implements Healer, PhysAttack {
 

@@ -1,4 +1,6 @@
-package day11.task2;
+package day11.task2.Classes;
+
+import day11.task2.Interfaces.PhysAttack;
 
 public abstract class Hero implements PhysAttack {
     double health;
