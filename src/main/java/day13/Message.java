@@ -31,13 +31,8 @@ public class Message {
         return date;
     }
 
-    @Override
     public String toString() {
-        return "Message{" +
-                "sender=" + sender +
-                ", receiver=" + receiver +
-                ", text='" + text + '\'' +
-                ", date=" + date +
-                '}';
+        return "FROM: " + this.sender + "\nTO: " + receiver +
+                "\nON: " + date + "\n" + text + "\n";
     }
 }

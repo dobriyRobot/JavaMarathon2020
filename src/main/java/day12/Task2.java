@@ -6,16 +6,13 @@ import java.util.List;
 public class Task2 {
     public static void main(String[] args) {
         List<Integer> numberList = new ArrayList<>();
-        for (int i = 0; i <= 30; i++) {
-            if ((i % 2) == 0) {
+        for (int i = 0; i <= 350; i++) {
+            if (i > 0 && i <= 30 && (i % 2) == 0) {
+                numberList.add(i);
+            } else if (i > 300 && i <= 350 && (i % 2) == 0){
                 numberList.add(i);
             }
         }
-            for(int i = 300; i <= 350; i++){
-                if((i % 2) == 0){
-                    numberList.add(i);
-                }
-            }
         System.out.println(numberList);
     }
 }

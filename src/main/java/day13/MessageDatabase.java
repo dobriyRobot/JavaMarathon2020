@@ -14,10 +14,13 @@ public class MessageDatabase {
        return messages;
     }
 
-    public static void  showDialog(User u1, User u2){
-        List<String> dialog = new ArrayList<>();
-        for (int i = 0; i < messages.size(); i ++){
-            System.out.println(messages.get(i).getSender() + " : " + messages.get(i).getText());
+    public static void showDialog(User u1, User u2){
+        for (Message message : messages){
+            if (message.getSender().equals(u1) && message.getReceiver().equals(u2))
+                System.out.println(u1 + ": " + message.getText());
+            if (message.getSender().equals(u2) && message.getReceiver().equals(u1))
+                System.out.println(u2 + ": " + message.getText());
+            }
         }
     }
-}
+

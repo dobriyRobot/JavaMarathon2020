@@ -1,6 +1,5 @@
 package day12.task5;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MusicBand {
@@ -16,16 +15,13 @@ public class MusicBand {
 
 
     public void printMembers() {
-        List<String> groupMembers = new ArrayList<>();
-        for(int i = 0; i < members.size(); i ++) {
-            groupMembers.add((members.get(i).getName() + " " + members.get(i).getSurName()));
-        }
-        System.out.println(groupMembers);
+        System.out.println(members);
     }
 
     public static void transferMembers(MusicBand band1, MusicBand band2) {
         for (int i = 0; i < band2.members.size(); i++) {
             band1.members.add(band2.members.get(i));
         }
+        band2.members.clear();
     }
 }

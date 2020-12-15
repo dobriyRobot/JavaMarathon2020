@@ -25,5 +25,6 @@ public class MusicBand {
         for(int i = 0; i < band2.members.size(); i++){
             band1.members.add(band2.members.get(i));
         }
+        band2.members.clear();
     }
 }

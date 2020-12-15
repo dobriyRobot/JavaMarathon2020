@@ -11,6 +11,11 @@ public class MusicArtist {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return name + " " + surName;
+    }
+
     public String getSurName(){
         return surName;
     }
