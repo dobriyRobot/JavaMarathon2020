@@ -23,7 +23,7 @@ public class Task1 {
 
         user3.sendMessage(user1, "Ну как хочешь");
 
-        MessageDatabase.showDialog(user1, user2);
+        MessageDatabase.showDialog(user3, user1);
 
         user1.subscribe(user2);
         user2.subscribe(user1);

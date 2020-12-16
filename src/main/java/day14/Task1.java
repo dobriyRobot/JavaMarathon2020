@@ -20,11 +20,7 @@ public class Task1 {
             String[] numbersString = line.split(" ");
             int[] numbers = new int[numbersString.length];
             if (numbersString.length != 10) {
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.out.println("Некорректный входной файл");
-                }
+                throw new IOException();
             } else {
                 for (int i = 0; i < numbers.length; i++) {
                     sum = sum + Integer.parseInt(numbersString[i]);
@@ -34,6 +30,8 @@ public class Task1 {
             scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+        } catch (IOException e) {
+            System.out.println("Некорректный входной файл");
         }
     }
 }
